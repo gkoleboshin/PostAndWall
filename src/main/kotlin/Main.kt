@@ -34,7 +34,7 @@ object WallService{
             postWithId = post.copy(id= post.id+1)
             havePosts=true
         }else{
-            postWithId = post.copy()
+            postWithId = post.copy(id= posts.last().id+1)
         }
         posts+= postWithId
         return posts.last()
