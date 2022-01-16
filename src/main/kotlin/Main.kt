@@ -1,6 +1,3 @@
-fun main(args: Array<String>) {
-    post(0,0,0,0,12332,"HelloWorld!!!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0)
-}
 
 fun main() {
     post(0,0,0,getDate(),"HelloWorld!!!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0)
@@ -25,6 +22,11 @@ fun postUpdate(id:Long,ownerId: Long,fromId: Long,createBy: Long,date: Long = 0L
 object WallService{
     var posts = emptyArray<Post>()
     var havePosts = false
+
+    fun clearPostsForTest(){
+        posts = emptyArray<Post>()
+        havePosts = false
+    }
 
     fun add(post:Post):Post{
         var postWithId:Post
