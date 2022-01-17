@@ -17,8 +17,8 @@ class WallServiceTest {
             getDate(),"HelloWorld!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0))
         val resault = WallService.editPost(Post(2,0,0,0,
             getDate(),"HelloWorld 2022!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0))
-
         assertTrue(resault)
+        WallService.posts = emptyArray()
     }
 
     @Test
@@ -27,6 +27,7 @@ class WallServiceTest {
             getDate(),"HelloWorld!!!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0)
         val actualPost = WallService.add(expendetPost)
         assertFalse(expendetPost.id == actualPost.id)
+        WallService.posts = emptyArray()
     }
 
     @Test
@@ -40,5 +41,6 @@ class WallServiceTest {
         val resault = WallService.editPost(Post(0,0,0,0,
             getDate(),"HelloWorld 2022!",0,false, comments = Comments(), copyright = Copyright(), likes = Likes(), reports = Reports(), views = Views(),"_",0,false,false,false,false,false,false, donut = Donut(),0))
         assertFalse(resault)
+        WallService.posts = emptyArray()
     }
 }
