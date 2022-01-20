@@ -1,4 +1,3 @@
 package ru.netology.post
 
-class Views {
-}
+data class Views(val count:Int=0)
