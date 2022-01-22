@@ -1,6 +1,6 @@
 package ru.netology.post
 
-import ru.netology.post.Views
+import ru.netology.post.atachments.Atachment
 
 data class Post(val id:Long = 0,
                 val ownerId:Long,
@@ -24,6 +24,7 @@ data class Post(val id:Long = 0,
                 val markedAsAds:Boolean,
                 val isFavorite:Boolean,
                 val donut: Donut?,
-                val postponedID:Long
+                val postponedID:Long,
+                val atachments: Array<Atachment>
                 )
 
