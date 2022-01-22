@@ -2,6 +2,7 @@ package ru.netology
 
 import ru.netology.post.*
 import ru.netology.post.atachments.*
+import ru.netology.post.atachments.multimediaContent.*
 import ru.netology.post.multimediaContent.*
 
 fun main() {

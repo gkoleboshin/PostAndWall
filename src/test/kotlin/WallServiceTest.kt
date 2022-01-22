@@ -5,7 +5,7 @@ import ru.netology.*
 import ru.netology.post.*
 import ru.netology.post.atachments.Atachment
 import ru.netology.post.atachments.AtachmentVideo
-import ru.netology.post.multimediaContent.Video
+import ru.netology.post.atachments.multimediaContent.Video
 
 class WallServiceTest {
 

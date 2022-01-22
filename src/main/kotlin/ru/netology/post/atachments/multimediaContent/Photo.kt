@@ -1,4 +1,4 @@
-package ru.netology.post.multimediaContent
+package ru.netology.post.atachments.multimediaContent
 
 data class Photo(val id:Long = 0,
                  val albumID:Long = 0,

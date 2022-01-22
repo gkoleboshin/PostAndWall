@@ -1,10 +1,6 @@
 package ru.netology.post.atachments
 
-import ru.netology.post.atachments.Atachment
-import ru.netology.post.multimediaContent.Audio
+import ru.netology.post.atachments.multimediaContent.Audio
 
-class AtachmentAudio (val type: Audio): Atachment() {
-    override fun toString(): String {
-        return "type=$type"
-    }
+data class AtachmentAudio (val audio: Audio): Atachment("audio") {
 }

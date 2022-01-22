@@ -1,4 +1,4 @@
-package ru.netology.post.multimediaContent
+package ru.netology.post.atachments.multimediaContent
 
 data class Gift(val id:Long = 0,
                 val thumb256:String = " ",

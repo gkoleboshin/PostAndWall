@@ -1,4 +1,4 @@
-package ru.netology.post.multimediaContent
+package ru.netology.post.atachments.multimediaContent
 
 import ru.netology.post.Image
 import ru.netology.post.Likes

@@ -1,4 +1,4 @@
-package ru.netology.post.multimediaContent
+package ru.netology.post.atachments.multimediaContent
 
 data class Src(val type:String,
                val url:String,

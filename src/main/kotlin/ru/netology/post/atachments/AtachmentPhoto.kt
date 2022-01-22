@@ -1,9 +1,6 @@
 package ru.netology.post.atachments
 
-import ru.netology.post.multimediaContent.Photo
+import ru.netology.post.atachments.multimediaContent.Photo
 
-class AtachmentPhoto(val type:Photo):Atachment(){
-    override fun toString(): String {
-        return "type = $type"
-    }
+data class AtachmentPhoto(val photo: Photo):Atachment("photo"){
 }
