@@ -1,0 +1,46 @@
+package ru.netology.post.atachments.multimediaContent
+
+import ru.netology.post.Image
+import ru.netology.post.Likes
+import ru.netology.post.Reposts
+
+data class Video(val id:Long = 0,
+                 val ownerId:Long = 0,
+                 val title:String = " ",
+                 val description:String = " ",
+                 val duration:Int = 0,
+                 val image: Image? = null,
+                 val firstFrame: Image? = null,
+                 val date:Long = 0,
+                 val addingDate:Long = 0,
+                 val views:Int = 0,
+                 val comments:Int = 0,
+                 val player:String = " ",
+                 var platform:String = " ",
+                 val canAdd:Boolean = false,
+                 val isPrivate:Boolean = false,
+                 val accessKey:String = " ",
+                 val processing:Int = 1,
+                 val isFavorite:Boolean = false,
+                 val canComment:Boolean = false,
+                 val canEdit:Boolean = false,
+                 val canLike:Boolean = false,
+                 val canRepost:Boolean = false,
+                 val canSubscribe:Boolean = false,
+                 val canAddToFaves:Boolean = false,
+                 val canAttachLink:Boolean = false,
+                 val width:Int = 0,
+                 val height:Int = 0,
+                 val userId:Long = 0,
+                 val converting:Boolean = false,
+                 val added:Boolean = false,
+                 val isSubscribed:Boolean = false,
+                 val repeat:Int = 1,
+                 val type:String=" ",
+                 val balance:Int=0,
+                 val live:Boolean=false,
+                 val upcoming:Boolean = if (live==true){true}else{false},
+                 val spectors:Int=1,
+                 val likes: Likes?=null,
+                 val reposts: Reposts?=null){
+}

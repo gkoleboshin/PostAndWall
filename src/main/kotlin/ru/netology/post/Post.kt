@@ -1,6 +1,6 @@
 package ru.netology.post
 
-import ru.netology.post.Views
+import ru.netology.post.atachments.Atachment
 
 data class Post(val id:Long = 0,
                 val ownerId:Long,
@@ -10,11 +10,11 @@ data class Post(val id:Long = 0,
                 val text:String,
                 val replyOwnerId:Long,
                 val friendsOnly:Boolean,
-                val comments: Comments,
-                val copyright: Copyright,
-                val likes: Likes,
-                val reports: Reports,
-                val views: Views,
+                val comments: Comments?,
+                val copyright: Copyright?,
+                val likes: Likes?,
+                val reports: Reports?,
+                val views: Views?,
                 val postType:String,
                 val signerID:Long,
                 val canPin:Boolean,
@@ -23,7 +23,8 @@ data class Post(val id:Long = 0,
                 val isPinned:Boolean,
                 val markedAsAds:Boolean,
                 val isFavorite:Boolean,
-                val donut: Donut,
-                val postponedID:Long
+                val donut: Donut?,
+                val postponedID:Long,
+                val atachments: Array<Atachment>
                 )
 
