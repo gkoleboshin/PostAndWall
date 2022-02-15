@@ -44,4 +44,24 @@ class WallServiceTest {
         assertFalse(resault)
         WallService.posts = emptyArray()
     }
+
+    @Test
+    fun create_comment_on_post(){
+        var atachments:Array<Atachment> = emptyArray<Atachment>()
+        atachments+=AtachmentVideo(Video())
+        WallService.add(Post(0,0,0,0,getDate(),"HelloWorld!!!",0,false, null, null, null, null,null, " ",0,false,false,false,false,false,false, null,0,atachments))
+        WallService.add(Post(0,0,0,0,getDate(),"HelloWorld!!",0,false, null, null, null, null,null, " ",0,false,false,false,false,false,false, null,0,atachments))
+        WallService.add(Post(0,0,0,0,getDate(),"HelloWorld!",0,false, null, null, null, null,null, " ",0,false,false,false,false,false,false, null,0,atachments))
+        val resault = WallService.createComment(Comment(1,"12346",1))
+        assertTrue(resault)
+        WallService.posts = emptyArray()
+    }
+
+    @Test(expected = PostNotFoundException::class)
+    fun should_throw(){
+        var atachments:Array<Atachment> = emptyArray<Atachment>()
+        atachments+=AtachmentVideo(Video())
+        WallService.posts = emptyArray()
+        WallService.createComment(Comment(1,"12346",4))
+    }
 }

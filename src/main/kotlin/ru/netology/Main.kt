@@ -3,7 +3,6 @@ package ru.netology
 import ru.netology.post.*
 import ru.netology.post.atachments.*
 import ru.netology.post.atachments.multimediaContent.*
-import ru.netology.post.multimediaContent.*
 
 fun main() {
 
@@ -17,7 +16,10 @@ fun main() {
     post(0,0,0,getDate(),"HelloWorld2!!!",0,false, null, null, null, null, null,"_",0,false,false,false,false,false,false, null,0,atachments)
 
     postUpdate(2,1,1,1,text = "Hello World 2022!!!", replyOwnerId = 0, friendsOnly = true , comments = null, copyright = null, likes =  null, reports = null, views = null, postType = "_", signerID =  0, canPin = false, canEdit =  false, canDelete = false, isPinned =  false, markedAsAds =  false, isFavorite =  false, donut = null, postponedID = 0)
+
+    WallService.createComment(Comment(1,"fdfdf",2))
 }
+
 
 fun getDate():Long{
     val date:Long= System.currentTimeMillis()/1000L
@@ -36,6 +38,7 @@ fun addAtachment(atachment: Atachment, atachments:Array<Atachment> = emptyArray<
     val newAtachments = atachments+atachment
     return newAtachments
 }
+
 
 
 
